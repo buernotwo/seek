@@ -30,13 +30,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    background: white;float: left;
 			}
 			#search-input{
-			    font-size:8px;position:absolute;padding-left:50px;outline:none;width:520px;height:40px;line-height:50px;float:left;border:1px solid #000;
+			    border:1px solid red;font-size:8px;position:absolute;padding-left:50px;outline:none;width:520px;height:40px;line-height:50px;float:left;border:1px solid #000;
 			}
 			#search-button{
 			    border:1px solid #000;margin:0px;position:absolute;background-image:url("./img/cn_searchbt_hp.png");background-repeat:no-repeat;width:45px;height: 40px;float: left;
 			}
 			#wrapper{
-			    position:absolute;top:105px;left:250px;
+			    position:absolute;top:145px;left:100px;
 			}
 			#spliteline{
 				posotion:absolute;margin-top:250px;left:300px;border:1px solid #000;
@@ -57,10 +57,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				border-left:1px solid #000;padding:10 0 0 10;font-size:12px;posotion:absolute;line-height:20px;margin-top:10px;margin-left:300px;left:270px;width:230px;height:80px;
 			}
 			#seek{
-				position:absolute;margin:0;padding:0;margin-top:-165px;margin-left:110px;
+				position:absolute;margin:0;padding:0;margin-top:-225px;margin-left:110px;
 			}
 			#seek:hover{
-				background:#708090;color:white;cursor:pointer;
+				background:#708090;color:#3385ff;cursor:pointer;
 			}
 			#seek p{
 				position:absolute;font-size:26px;font-family:"PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, Verdana, sans-serif;;
@@ -80,10 +80,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			#content5:hover{
 				background:#708090;color:white;cursor:pointer;
 			}
+			#spliteleftright{
+				position:absolute;float:right;border:1px solid red;width:100px;
+			}
 		</style>
 	</head>
-	<body background="http://www.bwidc.cn/wp-content/themes/DNSHH/images/body.png">
-			<div id="seek"><p>seek</p><br><p style="margin-left:80px;font-size:40px;">U</p></div>
+	<body background="./img/body.png">
+			<div id="spliteleftright">
+				<!-- 左右分割 -->
+			</div>
+			<div id="seek"><p style="border-left:5px solid #000;font-size:28px;">你</p><p style="border-left:5px solid #000;margin-left:40px;font-size:30px;">是谁？</p></div>
 			<div id="wrapper">
 				<div id="logo">
 					<form action="f" target="_self" method="get">
