@@ -30,7 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    background: white;float: left;
 			}
 			#search-input{
-			    border:1px solid red;font-size:10px;position:absolute;padding-left:55px;outline:none;width:520px;height:40px;line-height:40px;float:left;border:1px solid #000;
+			    font-size:10px;position:absolute;padding-left:55px;outline:none;width:520px;height:40px;line-height:40px;float:left;border:1px solid #000;
 			}
 			#search-button{
 			    border:1px solid #000;margin:0px;position:absolute;background-image:url("./img/cn_searchbt_hp.png");background-repeat:no-repeat;width:50px;height:42px;float: left;
@@ -42,22 +42,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				posotion:absolute;margin-top:250px;left:300px;border:1px solid #000;
 			}
 			#content1{
-				border-left:1px solid #000;padding:10 0 0 10;font-size:12px;line-height:20px;posotion: absolute;margin-top:20px;margin-left:100px;left:20px;width:180px;height:80px;
+				border-left:1px solid #000;padding-left:10px;padding-top:10px;font-size:12px;line-height:20px;posotion: absolute;margin-top:20px;margin-left:100px;left:20px;width:180px;height:80px;
 			}
 			#content2{
-				border-left:1px solid #000;padding:10 0 0 10;font-size:12px;posotion:absolute;line-height:20px;margin-top:10px;margin-left:100px;left:230px;width:180px;height:340px;
+				border-left:1px solid #000;padding-left:10px;padding-top:10px;font-size:12px;posotion:absolute;line-height:20px;margin-top:10px;margin-left:100px;left:230px;width:180px;height:340px;
 			}
 			#content3{
-				border-left:1px solid #000;padding:10 0 0 10;font-size:12px;posotion:absolute;line-height:20px;margin-top:-350px;margin-left:300px;left:270px;width:200px;height:80px;
+				border-left:1px solid #000;padding-left:10px;padding-top:10px;font-size:12px;posotion:absolute;line-height:20px;margin-top:-350px;margin-left:300px;left:270px;width:200px;height:80px;
 			}
 			#content4{
-				border-left:1px solid #000;padding:10 0 0 10;font-size:12px;posotion:absolute;line-height:20px;margin-top:10px;margin-left:300px;left:270px;width:200px;height:80px;
+				border-left:1px solid #000;padding-left:10px;padding-top:10px;font-size:12px;posotion:absolute;line-height:20px;margin-top:10px;margin-left:300px;left:270px;width:200px;height:80px;
 			}
 			#content5{
-				border-left:1px solid #000;padding:10 0 0 10;font-size:12px;posotion:absolute;line-height:20px;margin-top:10px;margin-left:300px;left:270px;width:230px;height:80px;
+				border-left:1px solid #000;padding-left:10px;padding-top:10px;font-size:12px;posotion:absolute;line-height:20px;margin-top:10px;margin-left:300px;left:270px;width:230px;height:80px;
 			}
 			#seek{
-				position:absolute;margin:0;padding:0;margin-top:-225px;margin-left:110px;
+				position:absolute;margin:0;padding:0;margin-top:-225px;margin-left:100px;
 			}
 			#seek:hover{
 				background:#708090;color:#fff;cursor:pointer;
