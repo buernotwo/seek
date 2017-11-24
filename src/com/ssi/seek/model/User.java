@@ -1,6 +1,9 @@
 package com.ssi.seek.model;
 
 public class User {
+	/**
+	 * @author buern
+	 */
 	private Long id;
 	private String name;
 	private String pwd;
