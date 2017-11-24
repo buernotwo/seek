@@ -30,10 +30,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    background: white;float: left;
 			}
 			#search-input{
-			    border:1px solid red;font-size:8px;position:absolute;padding-left:50px;outline:none;width:520px;height:40px;line-height:50px;float:left;border:1px solid #000;
+			    border:1px solid red;font-size:10px;position:absolute;padding-left:70px;outline:none;width:520px;height:40px;line-height:40px;float:left;border:1px solid #000;
 			}
 			#search-button{
-			    border:1px solid #000;margin:0px;position:absolute;background-image:url("./img/cn_searchbt_hp.png");background-repeat:no-repeat;width:45px;height: 40px;float: left;
+			    border:1px solid #000;margin:0px;position:absolute;background-image:url("./img/cn_searchbt_hp.png");background-repeat:no-repeat;width:50px;height:42px;float: left;
 			}
 			#wrapper{
 			    position:absolute;top:145px;left:100px;
