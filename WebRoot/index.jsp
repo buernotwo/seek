@@ -30,7 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    background: white;float: left;
 			}
 			#search-input{
-			    border:1px solid red;font-size:10px;position:absolute;padding-left:70px;outline:none;width:520px;height:40px;line-height:40px;float:left;border:1px solid #000;
+			    border:1px solid red;font-size:10px;position:absolute;padding-left:55px;outline:none;width:520px;height:40px;line-height:40px;float:left;border:1px solid #000;
 			}
 			#search-button{
 			    border:1px solid #000;margin:0px;position:absolute;background-image:url("./img/cn_searchbt_hp.png");background-repeat:no-repeat;width:50px;height:42px;float: left;
@@ -60,7 +60,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				position:absolute;margin:0;padding:0;margin-top:-225px;margin-left:110px;
 			}
 			#seek:hover{
-				background:#708090;color:#3385ff;cursor:pointer;
+				background:#708090;color:#fff;cursor:pointer;
 			}
 			#seek p{
 				position:absolute;font-size:26px;font-family:"PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, Verdana, sans-serif;;
