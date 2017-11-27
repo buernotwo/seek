@@ -15,3 +15,9 @@ Task 1123:记录搜索日志；(not to do now..)
 Task 1124:使用ssi框架驱动网站后台逻辑(done.) 
 
 Task 1125:主页面优化，增加User表，进行简单增删改查(to do.)
+
+Task 1126:...
+
+Task 1127:...
+
+Task 1128:(no time to concentrate on)
