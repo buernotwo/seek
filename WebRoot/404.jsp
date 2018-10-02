@@ -16,10 +16,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="k1,k2,k3">
 	<meta http-equiv="description" content="">
-	
+    <link rel="alternate icon" href="./img/kaduoxi.jpg" type="image/png" />
+	<link rel="stylesheet" href="./css/amazeui.min.css"/>
   </head>
   
   <body>
-    恭喜，新世界的大门为你打开. <br>
+	<div class="am-cf am-padding am-padding-bottom-0">
+		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">404</strong> / <small>That’s an error</small></div>
+	</div>
   </body>
 </html>
