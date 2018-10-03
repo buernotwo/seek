@@ -19,6 +19,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta http-equiv="keywords" content="none,NV,No">
 		<meta http-equiv="description" content="This is my generation">
 		<link rel="stylesheet" href="./css/index.css"/>
+		<link rel="stylesheet" href="./css/dialog.css">
+		<script src="./js/zepto.min.js"></script>
+		<script src="./js/dialog.js"></script>
 	</head>
 	<body background="./img/body.png">
 			<div id="spliteleftright">
@@ -27,9 +30,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="seek"><p style="border-left:5px solid #000;font-size:28px;">你</p><p style="border-left:5px solid #000;margin-left:40px;font-size:30px;">是谁？</p></div>
 			<div id="wrapper">
 				<div id="logo">
-					<form action="seek.acc" target="_self" method="post">
+					<form id="formID" action="seek.acc" target="_self" method="post">
 						<input type="text" id="search-input" name="q" placeholder="重要的人，不想忘记的人，绝对不能忘的人，就算我不记得你的名字，我也会一直一直拼命的寻找你↲" autocomplete="off">
-						<input type="submit" id="search-button" value="">
+						<input type="button" id="search-button" value="">
 					</form>
 				</div>
 			</div>
@@ -60,5 +63,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							再次去见你的。</div>
 			<div id="content5">重要的人，不能忘记的人，不想忘记的人。 <br>
 							你，是谁？</div>
+			<script type="text/javascript">
+				$('#search-button').click(function(){
+				    var infoDialog = $.dialog({
+				        type : 'tips',
+				        infoText : '正在提交中…',
+				        infoIcon : './img/loading.gif',
+				        autoClose : 2500,
+				        onClosed : function(){
+           					document.getElementById("formID").submit();
+       					}
+				    });    
+				});
+			</script>
 
 </html>
