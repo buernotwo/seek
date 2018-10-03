@@ -12,7 +12,7 @@
     
     
     <!-- 配置spring , 添加 actionBean -->
-    <bean id="QueryInfoAction" class="com.ssi.seek.action.QueryInfoAction"/>
+    <bean id="QueryInfoAction" class="com.ssi.seek.action.SeekAcc"/>
     
     <bean id="placeholderConfig"    
         class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">    

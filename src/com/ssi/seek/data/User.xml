@@ -6,18 +6,18 @@
 
 	<!-- select 语句，传参一个，返回User对象 。注：select id as id,name as name,pwd as pwd 
 		的as后面的名称要与User类中属性名称要一一对应 -->
-	<select id="getUserByName" parameterType="String"
+	<select id="getUserByIDCard" parameterType="String"
 		resultType="com.ssi.seek.model.User">
 		select
-		id as id,name as name,pwd as pwd
-		from T_TEST_USER
-		WHERE NAME = #{name}
+		IDCard as id,Name as name,UniformPwd as pwd
+		from T_USER
+		WHERE IDCARD = #{id}
 	</select>
 
 	<insert id="insertUser" parameterType="com.ssi.seek.model.User">
 		insert into
-		T_TEST_USER(ID,NAME,PWD,AGE,SEX)
+		T_USER(IDCARD, NATIONALITY, POSTXXS, AGE, NAME, NICKNAME, SEX, HOMETOWN, PHONENUMBER, EMAIL, COMPANY, HOME, COMPANYIDCARD, PRIMARYSCHOOL, MIDDLESCHOOL, COLLEGE, PIC, HOBBIES, HOMEMEMBERS, CONNECTINFO, SOCIALACCOUNT, UNIFORMPWD, DESCRIPTION)
 		values(#{id},#{name},#{pwd},#{age},#{sex})
 	</insert>
 
-</mapper>  
+</mapper>

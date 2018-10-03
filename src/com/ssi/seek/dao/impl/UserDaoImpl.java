@@ -22,14 +22,12 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 		// insert语句，传入一个对象
 		// -------------------------------------------------------------------------------------
 		User oneUser = new User();
-		oneUser.setId(Long.parseLong("6"));
+		oneUser.setIDCard("6");
 		oneUser.setName("go07");
-		oneUser.setPwd("pesd07");
+		oneUser.setUniformPwd("pesd07");
 		oneUser.setAge(Long.parseLong("25"));
 		oneUser.setSex(Long.parseLong("1"));
-		// int result =
-		// getSqlSession().insert("UserMapper.insertUser",oneUser);//insert语句，传入一个对象
-		// System.out.println("insert result:"+result);
+		getSqlSession().insert("UserMapper.insertUser",oneUser);//insert语句，传入一个对象
 
 		return user;
 	}

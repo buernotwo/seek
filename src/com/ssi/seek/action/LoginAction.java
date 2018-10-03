@@ -5,45 +5,42 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.ssi.seek.dao.UserDao;
 import com.ssi.seek.model.User;
 
+@SuppressWarnings("serial")
 public class LoginAction extends BaseAction {
-
-	/**   
-     *    
-     */
-	private static final long serialVersionUID = -439437585357651788L;
 
 	@Autowired
 	private UserDao userDao;
 
 	private User user;
 
-	private String username;
-	private String password;
+	private String IDCard;
+	private String UniformPwd;
 
 	public String execute() throws Exception {
-		user = userDao.getUserByName(username);
+		user = userDao.getUserByName(IDCard);
 		if (user != null) {
-			if (user.getPwd().equals(password)) {
+			if (user.getUniformPwd().equals(UniformPwd)) {
 				return SUCCESS;
 			}
 		}
 		return ERROR;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getIDCard() {
+		return IDCard;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setIDCard(String iDCard) {
+		IDCard = iDCard;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getUniformPwd() {
+		return UniformPwd;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUniformPwd(String uniformPwd) {
+		UniformPwd = uniformPwd;
 	}
+	
 
 }

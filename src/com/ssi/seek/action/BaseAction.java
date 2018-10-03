@@ -2,9 +2,7 @@ package com.ssi.seek.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+@SuppressWarnings("serial")
 public class BaseAction extends ActionSupport {
-	/**   
-     *    
-     */    
-    private static final long serialVersionUID = 4565394360208096613L;
+	//nothing to do
 }

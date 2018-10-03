@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="seek"><p style="border-left:5px solid #000;font-size:28px;">你</p><p style="border-left:5px solid #000;margin-left:40px;font-size:30px;">是谁？</p></div>
 			<div id="wrapper">
 				<div id="logo">
-					<form action="QueryInfo.action" target="_self" method="post">
+					<form action="seek.acc" target="_self" method="post">
 						<input type="text" id="search-input" name="q" placeholder="重要的人，不想忘记的人，绝对不能忘的人，就算我不记得你的名字，我也会一直一直拼命的寻找你↲" autocomplete="off">
 						<input type="submit" id="search-button" value="">
 					</form>

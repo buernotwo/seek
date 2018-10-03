@@ -10,7 +10,7 @@
     <constant name="struts.i18n.reload" value="false" />    
     <constant name="struts.configuration.xml.reload" value="false" />    
     <constant name="struts.custom.i18n.resources" value="globalMessages" />    
-    <constant name="struts.action.extension" value="action,," />    
+    <constant name="struts.action.extension" value="action,acc,," />    
     
     <constant name="struts.convention.package.locators.basePackage"    
               value="com.azdev.ssi.action" />    
@@ -20,7 +20,7 @@
         
         
     <package name="com.ssi.seek.action" extends="struts-default">    
-        <action name="QueryInfo" class="com.ssi.seek.action.QueryInfoAction">     
+        <action name="seek" class="com.ssi.seek.action.SeekAcc">     
             <result name="success">/404.jsp</result>
         </action>    
     </package>    
