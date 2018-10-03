@@ -67,13 +67,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				$('#search-button').click(function(){
 				    var infoDialog = $.dialog({
 				        type : 'tips',
-				        infoText : '正在提交中…',
+				        infoText : 'Seeking…',
 				        infoIcon : './img/loading.gif',
-				        autoClose : 2500,
-				        onClosed : function(){
+				        //autoClose : 1500,
+				        /*onClosed : function(){
            					document.getElementById("formID").submit();
-       					}
-				    });    
+       					}*/
+				    });
+				    window.setTimeout(function() {
+				        infoDialog.dialog.update({
+					        autoClose : 2500,
+					        infoText : '当前功能维护中,暂时关闭'
+				        });
+				    }, 1500);    
 				});
 			</script>
 
