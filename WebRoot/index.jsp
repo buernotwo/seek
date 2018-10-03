@@ -31,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="wrapper">
 				<div id="logo">
 					<form id="formID" action="seek.acc" target="_self" method="post">
-						<input type="text" id="search-input" name="q" placeholder="重要的人，不想忘记的人，绝对不能忘的人，就算我不记得你的名字，我也会一直一直拼命的寻找你↲" autocomplete="off">
+						<input type="text" id="search-input" name="q" placeholder="重要的人，不想忘记的人，绝对不能忘的人，就算我不记得你的名字，我也会一直一直拼命的寻找你↲" autocomplete="off" onkeydown="if(event.keyCode==13) {return false;}">
 						<input type="button" id="search-button" value="">
 					</form>
 				</div>

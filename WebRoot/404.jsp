@@ -24,5 +24,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="am-cf am-padding am-padding-bottom-0">
 		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">404</strong> / <small>That’s an error</small></div>
 	</div>
+	<!--  
+	<div class="widget widget_ui_comments"> <span class="icon"><i class="fa fa-pencil-square-o"></i></span><h3> 最新评论</h3> <ul> 
+		<li><a href="./img/kaduoxi.jpg" title="1"><img class="avatar avatar-50 photo avatar-default" height="50" width="50" src="./img/kaduoxi.jpg"> <strong>Tisawudii</strong> 12小时前 说<br />这个网站还挺冷清的哈</a></li >
+	</ul> </div>
+	-->
   </body>
 </html>
