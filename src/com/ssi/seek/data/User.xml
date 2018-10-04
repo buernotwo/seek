@@ -17,5 +17,18 @@
 		T_USER(IDCARD, NATIONALITY, POSTXXS, AGE, NAME, NICKNAME, SEX, HOMETOWN, PHONENUMBER, EMAIL, COMPANY, HOME, COMPANYIDCARD, PRIMARYSCHOOL, MIDDLESCHOOL, COLLEGE, PIC, HOBBIES, HOMEMEMBERS, CONNECTINFO, SOCIALACCOUNT, UNIFORMPWD, DESCRIPTION)
 		values(#{IDCard},#{Nationality},#{PostXXs},#{Age},#{Name},#{NickName},#{Sex},#{HomeTown},#{PhoneNumber},#{Email},#{Company},#{Home},#{CompanyIDCard},#{PrimarySchool},#{MiddleSchool},#{College},#{Pic},#{Hobbies},#{HomeMembers},#{ConnectInfo},#{SocialAccount},#{UniformPwd},#{Description})
 	</insert>
+	
+	<select id="deleteUser" parameterType="String"
+		resultType="com.ssi.seek.model.User">
+		delete
+		from T_USER
+		WHERE IDCARD = #{IDCard}
+	</select>
 
+	<select id="updateUser" parameterType="com.ssi.seek.model.User"
+		resultType="com.ssi.seek.model.User">
+		update T_USER
+		set NATIONALITY = #{Nationality}, POSTXXS = #{PostXXs}, AGE = #{Age}, NAME = #{name}, NICKNAME = #{NickName}, SEX = #{sex}, HOMETOWN = #{HomeTown}, PHONENUMBER = #{PhoneNumber}, EMAIL = #{Email}, COMPANY = #{Company}, HOME = #{Home}, COMPANYIDCARD = #{CompanyIDCard}, PRIMARYSCHOOL = #{PrimarySchool}, MIDDLESCHOOL = #{MiddleSchool}, COLLEGE = #{College}, PIC = #{Pic}, HOBBIES = #{Hobbies}, HOMEMEMBERS = #{HomeMembers}, CONNECTINFO = #{ConnectInfo}, SOCIALACCOUNT = #{SocialAccount}, UNIFORMPWD = #{UniformPwd}, DESCRIPTION = #{Description}
+		WHERE IDCARD = #{IDCard}
+	</select>
 </mapper>

@@ -21,10 +21,11 @@ public class SeekAcc extends BaseAction {
 		//根据SeekString从数据库查询相关信息返回
 		if("".equals(SeekString))
 			return ERROR;
-		User userT = userDao.getUserInfoBySeekString(SeekString);
+		User userT = userDao.getUserInfoByIDCard(SeekString);
 		if(userT != null)
 		{
 			this.setUser(userT);
+			//userDao.deleteUser(userT.getIDCard());
 			return SUCCESS;
 		}
 		return ERROR;
