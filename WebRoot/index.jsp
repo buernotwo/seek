@@ -71,7 +71,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				        infoIcon : './img/loading.gif',
 				        autoClose : 1500,
 				        onClosed : function(){
-           					document.getElementById("formID").submit();
+				        	if((document.getElementById("search-input").value == "") || 
+				        	(document.getElementById("search-input").value == null))
+           					{
+           						alert('搜索内容不能为空');
+       						}else{
+	       						document.getElementById("formID").submit();
+       						}
        					}
 				    });
 				    /*window.setTimeout(function() {

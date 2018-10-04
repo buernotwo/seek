@@ -1,9 +1,5 @@
 package com.ssi.seek.model;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
 /**
  * @author 天下无敌.阿坤
  */
@@ -19,42 +15,55 @@ public class User {
 	/*姓名*/
 	private String Name;
 	/*昵称,曾用名*/
-	private List<String> NickName;
+	//private List<String> NickName;
+	private String NickName;
 	/*性别*/
-	private Long Sex;
+	private String Sex;
 	/*籍贯*/
 	private String HomeTown;
 	/*手机号码*/
-	private List<String> PhoneNumber;
+	//private List<String> PhoneNumber;
+	private String PhoneNumber;
 	/*电子邮箱*/
-	private List<String> Email;
+	//private List<String> Email;
+	private String Email;
 	/*公司,公司地点*/
-	private Map<String, String> Company;
+	//private Map<String, String> Company;
+	private String Company;
 	/*家庭住址*/
-	private Map<String, String> Home;
+	//private Map<String, String> Home;
+	private String Home;
 	/*公司IDCard*/
-	private Map<String, String> CompanyIDCard;
+	//private Map<String, String> CompanyIDCard;
+	private String CompanyIDCard;
 	/*小学*/
-	private Map<String, Date> PrimarySchool;
+	//private Map<String, Date> PrimarySchool;
+	private String PrimarySchool;
 	/*中学*/
-	private Map<String, Date> MiddleSchool;
+	//private Map<String, Date> MiddleSchool;
+	private String MiddleSchool;
 	/*大学*/
-	private Map<String, Date> College;
+	//private Map<String, Date> College;
+	private String College;
 	/*图片*/
-	private List<Long> Pic;
+	//private List<Long> Pic;
+	private String Pic;
 	/*爱好*/
-	private List<Long> Hobbies;
+	//private List<String> Hobbies;
+	private String Hobbies;
 	/*家庭成员*/
-	private Map<String, String> HomeMembers;
+	//private Map<String, String> HomeMembers;
+	private String HomeMembers;
 	/*家庭成员联系方式*/
-	private Map<String, String> ConnectInfo;
+	//private Map<String, String> ConnectInfo;
+	private String ConnectInfo;
 	/*社交账号*/
-	private Map<String, String> SocialAccount;
+	//private Map<String, String> SocialAccount;
+	private String SocialAccount;
 	/*密码*/
 	private String UniformPwd;
 	/*对User的描述*/
 	private String Description;
-	
 	public String getIDCard() {
 		return IDCard;
 	}
@@ -85,16 +94,16 @@ public class User {
 	public void setName(String name) {
 		Name = name;
 	}
-	public List<String> getNickName() {
+	public String getNickName() {
 		return NickName;
 	}
-	public void setNickName(List<String> nickName) {
+	public void setNickName(String nickName) {
 		NickName = nickName;
 	}
-	public Long getSex() {
+	public String getSex() {
 		return Sex;
 	}
-	public void setSex(Long sex) {
+	public void setSex(String sex) {
 		Sex = sex;
 	}
 	public String getHomeTown() {
@@ -103,82 +112,82 @@ public class User {
 	public void setHomeTown(String homeTown) {
 		HomeTown = homeTown;
 	}
-	public List<String> getPhoneNumber() {
+	public String getPhoneNumber() {
 		return PhoneNumber;
 	}
-	public void setPhoneNumber(List<String> phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		PhoneNumber = phoneNumber;
 	}
-	public List<String> getEmail() {
+	public String getEmail() {
 		return Email;
 	}
-	public void setEmail(List<String> email) {
+	public void setEmail(String email) {
 		Email = email;
 	}
-	public Map<String, String> getCompany() {
+	public String getCompany() {
 		return Company;
 	}
-	public void setCompany(Map<String, String> company) {
+	public void setCompany(String company) {
 		Company = company;
 	}
-	public Map<String, String> getHome() {
+	public String getHome() {
 		return Home;
 	}
-	public void setHome(Map<String, String> home) {
+	public void setHome(String home) {
 		Home = home;
 	}
-	public Map<String, String> getCompanyIDCard() {
+	public String getCompanyIDCard() {
 		return CompanyIDCard;
 	}
-	public void setCompanyIDCard(Map<String, String> companyIDCard) {
+	public void setCompanyIDCard(String companyIDCard) {
 		CompanyIDCard = companyIDCard;
 	}
-	public Map<String, Date> getPrimarySchool() {
+	public String getPrimarySchool() {
 		return PrimarySchool;
 	}
-	public void setPrimarySchool(Map<String, Date> primarySchool) {
+	public void setPrimarySchool(String primarySchool) {
 		PrimarySchool = primarySchool;
 	}
-	public Map<String, Date> getMiddleSchool() {
+	public String getMiddleSchool() {
 		return MiddleSchool;
 	}
-	public void setMiddleSchool(Map<String, Date> middleSchool) {
+	public void setMiddleSchool(String middleSchool) {
 		MiddleSchool = middleSchool;
 	}
-	public Map<String, Date> getCollege() {
+	public String getCollege() {
 		return College;
 	}
-	public void setCollege(Map<String, Date> college) {
+	public void setCollege(String college) {
 		College = college;
 	}
-	public List<Long> getPic() {
+	public String getPic() {
 		return Pic;
 	}
-	public void setPic(List<Long> pic) {
+	public void setPic(String pic) {
 		Pic = pic;
 	}
-	public List<Long> getHobbies() {
+	public String getHobbies() {
 		return Hobbies;
 	}
-	public void setHobbies(List<Long> hobbies) {
+	public void setHobbies(String hobbies) {
 		Hobbies = hobbies;
 	}
-	public Map<String, String> getHomeMembers() {
+	public String getHomeMembers() {
 		return HomeMembers;
 	}
-	public void setHomeMembers(Map<String, String> homeMembers) {
+	public void setHomeMembers(String homeMembers) {
 		HomeMembers = homeMembers;
 	}
-	public Map<String, String> getConnectInfo() {
+	public String getConnectInfo() {
 		return ConnectInfo;
 	}
-	public void setConnectInfo(Map<String, String> connectInfo) {
+	public void setConnectInfo(String connectInfo) {
 		ConnectInfo = connectInfo;
 	}
-	public Map<String, String> getSocialAccount() {
+	public String getSocialAccount() {
 		return SocialAccount;
 	}
-	public void setSocialAccount(Map<String, String> socialAccount) {
+	public void setSocialAccount(String socialAccount) {
 		SocialAccount = socialAccount;
 	}
 	public String getUniformPwd() {

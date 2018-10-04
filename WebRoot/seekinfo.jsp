@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 	<div class="am-cf am-padding am-padding-bottom-0">
-		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">SUCCESS</strong> / <small>That’s a nice action:<s:property value="OutString"/></small></div>
+		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">SUCCESS</strong> / <small><s:property value="user.Name"/> is in DB.Work in <s:property value="user.Company"/></small></div>
 	</div>
   </body>
 </html>

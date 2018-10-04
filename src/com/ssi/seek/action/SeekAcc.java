@@ -1,5 +1,10 @@
 package com.ssi.seek.action;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ssi.seek.dao.UserDao;
+import com.ssi.seek.model.User;
+
 
 /**
  * 根据用户输入的关键字去数据库查找相关信息，并return.
@@ -7,12 +12,22 @@ package com.ssi.seek.action;
 @SuppressWarnings("serial")
 public class SeekAcc extends BaseAction {
 	
+	@Autowired
+	private UserDao userDao;
+	
+	private User user;
 	private String SeekString;
-	private String OutString;
 	public String Seek() throws Exception {
 		//根据SeekString从数据库查询相关信息返回
-		this.setOutString(SeekString+"女，江北人");
-		return SUCCESS;
+		if("".equals(SeekString))
+			return ERROR;
+		User userT = userDao.getUserInfoBySeekString(SeekString);
+		if(userT != null)
+		{
+			this.setUser(userT);
+			return SUCCESS;
+		}
+		return ERROR;
 	}
 
 	public String getSeekString() {
@@ -23,12 +38,12 @@ public class SeekAcc extends BaseAction {
 		SeekString = seekString;
 	}
 
-	public String getOutString() {
-		return OutString;
+	public User getUser() {
+		return user;
 	}
 
-	public void setOutString(String outString) {
-		OutString = outString;
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 }

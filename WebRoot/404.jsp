@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 	<div class="am-cf am-padding am-padding-bottom-0">
-		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">404</strong> / <small>That’s an error</small></div>
+		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">404</strong> / <small>No info in DB.</small></div>
 	</div>
 	<!--  
 	<div class="widget widget_ui_comments"> <span class="icon"><i class="fa fa-pencil-square-o"></i></span><h3> 最新评论</h3> <ul> 

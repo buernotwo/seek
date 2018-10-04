@@ -4,20 +4,18 @@
 
 <mapper namespace="UserMapper">
 
-	<!-- select 语句，传参一个，返回User对象 。注：select id as id,name as name,pwd as pwd 
-		的as后面的名称要与User类中属性名称要一一对应 -->
-	<select id="getUserByIDCard" parameterType="String"
+	<select id="getUserInfoBySeekString" parameterType="String"
 		resultType="com.ssi.seek.model.User">
 		select
-		IDCard as id,Name as name,UniformPwd as pwd
+		IDCARD, NATIONALITY, POSTXXS, AGE, NAME, NICKNAME, SEX, HOMETOWN, PHONENUMBER, EMAIL, COMPANY, HOME, COMPANYIDCARD, PRIMARYSCHOOL, MIDDLESCHOOL, COLLEGE, PIC, HOBBIES, HOMEMEMBERS, CONNECTINFO, SOCIALACCOUNT, UNIFORMPWD, DESCRIPTION
 		from T_USER
-		WHERE IDCARD = #{id}
+		WHERE IDCARD = #{IDCard}
 	</select>
 
 	<insert id="insertUser" parameterType="com.ssi.seek.model.User">
 		insert into
 		T_USER(IDCARD, NATIONALITY, POSTXXS, AGE, NAME, NICKNAME, SEX, HOMETOWN, PHONENUMBER, EMAIL, COMPANY, HOME, COMPANYIDCARD, PRIMARYSCHOOL, MIDDLESCHOOL, COLLEGE, PIC, HOBBIES, HOMEMEMBERS, CONNECTINFO, SOCIALACCOUNT, UNIFORMPWD, DESCRIPTION)
-		values(#{id},#{name},#{pwd},#{age},#{sex})
+		values(#{IDCard},#{Nationality},#{PostXXs},#{Age},#{Name},#{NickName},#{Sex},#{HomeTown},#{PhoneNumber},#{Email},#{Company},#{Home},#{CompanyIDCard},#{PrimarySchool},#{MiddleSchool},#{College},#{Pic},#{Hobbies},#{HomeMembers},#{ConnectInfo},#{SocialAccount},#{UniformPwd},#{Description})
 	</insert>
 
 </mapper>
