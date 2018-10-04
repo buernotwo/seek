@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="wrapper">
 				<div id="logo">
 					<form id="formID" action="seek.acc" target="_self" method="post">
-						<input type="text" id="search-input" name="SeekString" placeholder="重要的人，不想忘记的人，绝对不能忘的人，就算我不记得你的名字，我也会一直一直拼命的寻找你↲" autocomplete="off" onkeydown="if(event.keyCode==13) {return false;}">
+						<input type="text" id="search-input" name="SeekString" placeholder="To Seek You Wherever You are↲" autocomplete="off" onkeydown="if(event.keyCode==13) {return false;}">
 						<input type="button" id="search-button" value="">
 					</form>
 				</div>
@@ -72,7 +72,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				        	if((document.getElementById("search-input").value == "") || 
 				        	(document.getElementById("search-input").value == null))
            					{
-           						alert('搜索内容不能为空');
+           						alert('Input content can not be empty.');
        						}else{
 	       						document.getElementById("formID").submit();
        						}
