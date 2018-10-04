@@ -44,8 +44,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  <tbody class="d-block">
 			    <tr class="d-block">
 			      <td class="d-block comment-body markdown-body  js-comment-body">
-			          <p><code>简单的说呢，这个人不简单</code></p>
-			          <p><code>叶落几春秋，花开又一年，著我绣夹裙，事事四五通，足下蹑丝履，头上玳瑁光，腰若流纨素，耳著明月当，指如削葱根，口如含珠丹，纤纤作细步，精妙世无双</code></p>
+			          <p><code>IDCard:<s:property value="user.IDCard"/></code></p>
+			          <p><code>Nationality:<s:property value="user.Nationality"/></code></p>
+			          <p><code>PostXXs:<s:property value="user.PostXXs"/></code></p>
+			          <p><code>Age:<s:property value="user.Age"/></code></p>
+			          <p><code>Name:<s:property value="user.Name"/></code></p>
+			          <p><code>NickName:<s:property value="user.NickName"/></code></p>
+			          <p><code>Sex:<s:property value="user.Sex"/></code></p>
+			          <p><code>HomeTown:<s:property value="user.HomeTown"/></code></p>
+			          <p><code>PhoneNumber:<s:property value="user.PhoneNumber"/></code></p>
+			          <p><code>Email:<s:property value="user.Email"/></code></p>
+			          <p><code>Company:<s:property value="user.Company"/></code></p>
+			          <p><code>Home:<s:property value="user.Home"/></code></p>
+			          <p><code>CompanyIDCard:<s:property value="user.CompanyIDCard"/></code></p>
+			          <p><code>PrimarySchool:<s:property value="user.PrimarySchool"/></code></p>
+			          <p><code>MiddleSchool:<s:property value="user.MiddleSchool"/></code></p>
+			          <p><code>College:<s:property value="user.College"/></code></p>
+			          <p><code>Hobbies:<s:property value="user.Hobbies"/></code></p>
+			          <p><code>HomeMembers:<s:property value="user.HomeMembers"/></code></p>
+			          <p><code>ConnectInfo:<s:property value="user.ConnectInfo"/></code></p>
+			          <p><code>SocialAccount:<s:property value="user.SocialAccount"/></code></p>
+			          <p><code>UniformPwd:<s:property value="user.UniformPwd"/></code></p>
+			          <p><code>Description:<s:property value="user.Description"/></code></p>
 			      </td>
 			    </tr>
 			  </tbody>
