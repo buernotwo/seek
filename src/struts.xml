@@ -17,11 +17,12 @@
     <constant name="struts.convention.result.path" value="/" />    
     <constant name="struts.serve.static" value="true" />    
     <constant name="struts.serve.static.browserCache" value="false" />    
-        
+    <constant name="struts.devMode" value="true" />
         
     <package name="com.ssi.seek.action" extends="struts-default">    
-        <action name="seek" class="com.ssi.seek.action.SeekAcc">     
-            <result name="success">/404.jsp</result>
+        <action name="seek" class="com.ssi.seek.action.SeekAcc" method="Seek">     
+            <result name="error">/404.jsp</result>
+            <result name="success">/seekinfo.jsp</result>
         </action>    
     </package>    
         

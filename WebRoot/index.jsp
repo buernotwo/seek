@@ -31,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="wrapper">
 				<div id="logo">
 					<form id="formID" action="seek.acc" target="_self" method="post">
-						<input type="text" id="search-input" name="q" placeholder="重要的人，不想忘记的人，绝对不能忘的人，就算我不记得你的名字，我也会一直一直拼命的寻找你↲" autocomplete="off" onkeydown="if(event.keyCode==13) {return false;}">
+						<input type="text" id="search-input" name="SeekString" placeholder="重要的人，不想忘记的人，绝对不能忘的人，就算我不记得你的名字，我也会一直一直拼命的寻找你↲" autocomplete="off" onkeydown="if(event.keyCode==13) {return false;}">
 						<input type="button" id="search-button" value="">
 					</form>
 				</div>
@@ -69,17 +69,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				        type : 'tips',
 				        infoText : 'Seeking…',
 				        infoIcon : './img/loading.gif',
-				        //autoClose : 1500,
-				        /*onClosed : function(){
+				        autoClose : 1500,
+				        onClosed : function(){
            					document.getElementById("formID").submit();
-       					}*/
+       					}
 				    });
-				    window.setTimeout(function() {
+				    /*window.setTimeout(function() {
 				        infoDialog.dialog.update({
 					        autoClose : 2500,
 					        infoText : '当前功能维护中,暂时关闭'
 				        });
-				    }, 1500);    
+				    }, 1500);*/
 				});
 			</script>
 
