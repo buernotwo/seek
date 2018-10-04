@@ -24,10 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script src="./js/dialog.js"></script>
 	</head>
 	<body background="./img/body.png">
-			<div id="spliteleftright">
-				<!-- 左右分割 -->
-			</div>
-			<div id="seek"><p style="border-left:5px solid #000;font-size:28px;">你</p><p style="border-left:5px solid #000;margin-left:40px;font-size:30px;">是谁？</p></div>
+			<!-- <div id="spliteleftright"></div> -->
+			<!-- <div id="seek"><p style="border-left:5px solid #000;font-size:28px;">你</p><p style="border-left:5px solid #000;margin-left:40px;font-size:30px;">是谁？</p></div> -->
 			<div id="wrapper">
 				<div id="logo">
 					<form id="formID" action="seek.acc" target="_self" method="post">
@@ -36,8 +34,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</form>
 				</div>
 			</div>
-			<div id="spliteline"></div>
-			<div id="content1">只要记住你的名字<br>
+			<!-- <div id="spliteline"></div> -->
+			<!-- <div id="content1">只要记住你的名字<br>
 							不管你在世界的哪个地方<br>
 							我一定会，去见你。</div>
 			<div id="content2">清晨 醒来的时候 <br>
@@ -62,7 +60,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							我一定会，<br>
 							再次去见你的。</div>
 			<div id="content5">重要的人，不能忘记的人，不想忘记的人。 <br>
-							你，是谁？</div>
+							你，是谁？</div> -->
 			<script type="text/javascript">
 				$('#search-button').click(function(){
 				    var infoDialog = $.dialog({

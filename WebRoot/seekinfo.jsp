@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>UrHere</title>
+    <title>DetailInfo</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -37,7 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</style>
   </head>
   
-  <body>
+  <body background="./img/body.png">
 	<div class="am-cf am-padding am-padding-bottom-0" style="border-top:1px solid red;border-left:1px solid red;border-bottom:1px solid red;border-radius:50px 0 0 0;">
 		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">SUCCESS</strong> / <small><s:property value="user.Name"/> is in DB.Work in <s:property value="user.Company"/></small>
 			<table class="d-block">

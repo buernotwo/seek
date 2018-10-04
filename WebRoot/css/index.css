@@ -1,23 +1,51 @@
 *{
    	margin:0;padding:0;list-style: none;text-decoration: none;
 }
+#wrapper{
+	position: relative;
+}
 #logo{
-    float: left;margin:-5px 5px 0 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 50%;
+	height: 30%;
+	margin: 250px auto;
 }
 form{
-    background: white;float: left;
+    background:white;width:600px;height:40px;
 }
 #search-input{
-    font-size:12px;position:absolute;padding-left:55px;outline:none;width:550px;height:40px;line-height:40px;float:left;border:1px solid #000;
+	vertical-align:middle;
+    overflow: hidden;
+    font-size:10px;
+    position:relative;
+    padding-left:10px;
+    outline:none;
+    width:537px;
+    height:40px;
+    line-height:40px;
+    float:left;
+    border-left:1px solid #000;
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+    float:left;
 }
 #search-button{
-    border:1px solid #000;margin:0px;position:absolute;background-image:url("../img/cn_searchbt_hp.png");background-repeat:no-repeat;width:50px;height:42px;float: left;
-}
-#wrapper{
-    position:absolute;top:145px;left:100px;
+	vertical-align:middle;
+    border:1px solid #000;
+    margin:0 0 0 -1px;
+    position:relative;
+    background-image:url("../img/cn_searchbt_hp.png");
+    background-repeat:no-repeat;
+    width:50px;
+    height:42px;
+    float:left;
 }
 #spliteline{
-	posotion:absolute;margin-top:250px;left:300px;border:1px solid #000;
+	posotion:absolute;margin-top:250px;border:1px solid #000;
 }
 #content1{
 	border-left:1px solid #000;padding-left:10px;padding-top:10px;font-size:12px;line-height:20px;posotion: absolute;margin-top:20px;margin-left:100px;left:20px;width:180px;height:80px;
@@ -59,5 +87,5 @@ form{
 	background:#708090;color:white;cursor:pointer;
 }
 #spliteleftright{
-	position:absolute;float:right;border:1px solid red;width:100px;
+	position:absolute;float:right;border:1px solid red;width:200px;
 }

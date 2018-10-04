@@ -64,6 +64,7 @@ public class User {
 	private String UniformPwd;
 	/*对User的描述*/
 	private String Description;
+	
 	public String getIDCard() {
 		return IDCard;
 	}

@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</style>
   </head>
   
-  <body>
+  <body background="./img/body.png">
 	<div class="am-cf am-padding am-padding-bottom-0" style="border-bottom:1px solid red;border-top:1px solid red;border-radius:50px 0 0 0;">
 		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">404</strong> / <small>No info in DB.</small>
 			<table class="d-block">
