@@ -1,7 +1,13 @@
 package com.ssi.seek.action;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ssi.seek.dao.ImageDao;
@@ -26,6 +32,10 @@ public class SeekAcc extends BaseAction {
 	private List<Image> imageList;
 	private String SeekString;
 	public String Seek() throws Exception {
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String filePath = request.getSession().getServletContext().getRealPath("");//request.getContextPath();
+		//request.getSession().getServletContext().getRealPath("");
+		//C:\Users\Administrator\Workspaces\MyEclipse 10--\.metadata\.me_tcat\webapps\seek\111111.png
 		if("".equals(SeekString))
 			return ERROR;
 		User userT = userDao.getUserInfoByIDCard(SeekString);
@@ -35,6 +45,16 @@ public class SeekAcc extends BaseAction {
 		if(!imageListT.isEmpty())
 		{
 			setImageList(imageListT);
+			for(Image image:imageListT){
+				FileOutputStream outSTr = null;
+				BufferedOutputStream Buff=null;
+				outSTr = new FileOutputStream(new File(filePath+"\\"+image.getImageID()+".png"));
+				System.out.println(filePath+"\\"+image.getImageID()+".png");
+				Buff=new BufferedOutputStream(outSTr);
+				Buff.write(image.getImage());
+				Buff.flush();
+				Buff.close();
+			}
 		}
 		if((userT != null) || (!imageListT.isEmpty()))
 			return SUCCESS;
@@ -64,7 +84,5 @@ public class SeekAcc extends BaseAction {
 	public void setImageList(List<Image> imageList) {
 		this.imageList = imageList;
 	}
-
-
 	
 }
