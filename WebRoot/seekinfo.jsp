@@ -33,47 +33,82 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    border-radius: 3px;
     	font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
 	}
+	#wrapper{
+		position: relative;
+	}
+	#logo{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 50%;
+		height: 30%;
+		margin: 50px auto;
+	}
+	.dingzhi-p p{
+		width:200px;
+	}
+	.dingzhi-img img{
+	    border-radius:10px;
+	    margin:10px 10px 10px 10px;
+		width:200px;
+		height:200px;
+		float:left;
+	}
 	</style>
   </head>
   
-  <body background="./img/body.png">
-	<div class="am-cf am-padding am-padding-bottom-0" style="border-top:1px solid red;border-left:1px solid red;border-bottom:1px solid red;border-radius:50px 0 0 0;">
-		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">SUCCESS</strong> / <small><s:property value="user.Name"/> is in DB.Work in <s:property value="user.Company"/></small>
-			<table class="d-block">
-			  <tbody class="d-block">
-			    <tr class="d-block">
-			      <td class="d-block comment-body markdown-body  js-comment-body">
-			          <p><code>IDCard:<s:property value="user.IDCard"/></code></p>
-			          <p><code>Nationality:<s:property value="user.Nationality"/></code></p>
-			          <p><code>PostXXs:<s:property value="user.PostXXs"/></code></p>
-			          <p><code>Age:<s:property value="user.Age"/></code></p>
-			          <p><code>Name:<s:property value="user.Name"/></code></p>
-			          <p><code>NickName:<s:property value="user.NickName"/></code></p>
-			          <p><code>Sex:<s:property value="user.Sex"/></code></p>
-			          <p><code>HomeTown:<s:property value="user.HomeTown"/></code></p>
-			          <p><code>PhoneNumber:<s:property value="user.PhoneNumber"/></code></p>
-			          <p><code>Email:<s:property value="user.Email"/></code></p>
-			          <p><code>Company:<s:property value="user.Company"/></code></p>
-			          <p><code>Home:<s:property value="user.Home"/></code></p>
-			          <p><code>CompanyIDCard:<s:property value="user.CompanyIDCard"/></code></p>
-			          <p><code>PrimarySchool:<s:property value="user.PrimarySchool"/></code></p>
-			          <p><code>MiddleSchool:<s:property value="user.MiddleSchool"/></code></p>
-			          <p><code>College:<s:property value="user.College"/></code></p>
-			          <p><code>Hobbies:<s:property value="user.Hobbies"/></code></p>
-			          <p><code>HomeMembers:<s:property value="user.HomeMembers"/></code></p>
-			          <p><code>ConnectInfo:<s:property value="user.ConnectInfo"/></code></p>
-			          <p><code>SocialAccount:<s:property value="user.SocialAccount"/></code></p>
-			          <p><code>UniformPwd:<s:property value="user.UniformPwd"/></code></p>
-			          <p><code>Description:<s:property value="user.Description"/></code></p>
-			          <s:iterator value="imageList" status="li">
-						  <p><code>ImageID:<s:property value="ImageID"/></code></p>
-						  <p><code>IDCard:<s:property value="IDCard"/></code></p>
-						  <p><code>Image:<s:property value="Image"/></code></p>
-					  </s:iterator>
-			      </td>
-			    </tr>
-			  </tbody>
-			</table>
+  <body style="background:url('<%=basePath%>img/body.png');">
+  	<div id="wrapper">
+		<div id="logo">
+			<div class="am-cf am-padding am-padding-bottom-0" style="border-bottom:1px solid #000;border-top:2px solid #000;border-radius:50px 0 0 0;">
+				<div class="am-fl am-cf"><!-- <strong class="am-text-primary am-text-lg">SUCCESS</strong> / <small style='font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";'><s:property value="user.Name"/> is in DB.Work in <s:property value="user.Company"/></small>-->
+					<table class="d-block">
+					  <tbody class="d-block">
+					    <tr class="d-block">
+					      <td class="d-block comment-body markdown-body  js-comment-body dingzhi-p">
+					          <p><code>IDCard：<s:property value="user.IDCard"/></code></p>
+					          <p><code>Nationality：<s:property value="user.Nationality"/></code></p>
+					          <p><code>PostXXs：<s:property value="user.PostXXs"/></code></p>
+					          <p><code>Age：<s:property value="user.Age"/></code></p>
+					          <p><code>Name：<s:property value="user.Name"/></code></p>
+					          <p><code>NickName：<s:property value="user.NickName"/></code></p>
+					          <p><code>Sex：<s:property value="user.Sex"/></code></p>
+					          <p><code>HomeTown：<s:property value="user.HomeTown"/></code></p>
+					          <p><code>PhoneNumber：<s:property value="user.PhoneNumber"/></code></p>
+					          <p><code>Email：<s:property value="user.Email"/></code></p>
+					          <p><code>Company：<s:property value="user.Company"/></code></p>
+					          <p><code>Home：<s:property value="user.Home"/></code></p>
+					          <p><code>CompanyIDCard：<s:property value="user.CompanyIDCard"/></code></p>
+					          <p><code>PrimarySchool：<s:property value="user.PrimarySchool"/></code></p>
+					          <p><code>MiddleSchool：<s:property value="user.MiddleSchool"/></code></p>
+					          <p><code>College：<s:property value="user.College"/></code></p>
+					          <p><code>Hobbies：<s:property value="user.Hobbies"/></code></p>
+					          <p><code>HomeMembers：<s:property value="user.HomeMembers"/></code></p>
+					          <p><code>ConnectInfo：<s:property value="user.ConnectInfo"/></code></p>
+					          <p><code>SocialAccount：<s:property value="user.SocialAccount"/></code></p>
+					          <p><code>UniformPwd：<s:property value="user.UniformPwd"/></code></p>
+					          <p><code>Description：<s:property value="user.Description"/></code></p>
+					          <s:iterator value="imageList" status="li">
+								  <p><code>ImageID：<s:property value="ImageID"/></code></p>
+								  <p><code>IDCard：<s:property value="IDCard"/></code></p>
+								  <p><code>Image：<s:property value="Image"/></code></p>
+							  </s:iterator>
+					      </td>
+					      <td class="d-block comment-body markdown-body  js-comment-body dingzhi-img" style="float:left;">
+					      	  <img src="<%=basePath%>img/test/001.jpg"/>
+					      	  <img src="<%=basePath%>img/test/002.jpg"/>
+					      	  <img src="<%=basePath%>img/test/003.jpg"/>
+					      	  <img src="<%=basePath%>img/test/004.jpg"/>
+					      	  <img src="<%=basePath%>img/test/005.jpg"/>
+					      	  <img src="<%=basePath%>img/test/006.jpg"/>
+					      </td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
   </body>

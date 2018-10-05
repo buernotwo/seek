@@ -33,26 +33,43 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    border-radius: 3px;
     	font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
 	}
+	#wrapper{
+		position: relative;
+	}
+	#logo{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 50%;
+		height: 30%;
+		margin: 50px auto;
+	}
 	</style>
   </head>
   
-  <body background="./img/body.png">
-	<div class="am-cf am-padding am-padding-bottom-0" style="border-bottom:1px solid red;border-top:1px solid red;border-radius:50px 0 0 0;">
-		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">404</strong> / <small>No info in DB.</small>
-			<table class="d-block">
-			  <tbody class="d-block">
-			    <tr class="d-block">
-			      <td class="d-block comment-body markdown-body  js-comment-body">
-			          <p><code>连接服务器失败</code></p>
-			          <p><code>请试试以下办法：
-							     检查网线、调制解调器和路由器;
-							     重新连接到 Wi-Fi 网络;
-							     运行 Windows 网络诊断;
-							   ERR_INTERNET_DISCONNECTED</code></p>
-			      </td>
-			    </tr>
-			  </tbody>
-			</table>
+  <body style="background:url('<%=basePath%>img/body.png');">
+   	<div id="wrapper">
+		<div id="logo">
+			<div class="am-cf am-padding am-padding-bottom-0">
+				<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">404</strong> / <small>No info in DB.</small>
+					<table class="d-block">
+					  <tbody class="d-block">
+					    <tr class="d-block">
+					      <td class="d-block comment-body markdown-body  js-comment-body">
+					          <p><code>连接服务器失败</code></p>
+					          <p><code>请试试以下办法：
+									     检查网线、调制解调器和路由器;
+									     重新连接到 Wi-Fi 网络;
+									     运行 Windows 网络诊断;
+									   ERR_INTERNET_DISCONNECTED</code></p>
+					      </td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!--  
