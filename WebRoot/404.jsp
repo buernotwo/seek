@@ -49,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</style>
   </head>
   
-  <body style="background:url('<%=basePath%>img/body.png');">
+  <body style="background:url('<%=basePath%>img/body.png');" oncontextmenu="return false" ondragstart="return false" onselect="document.selection.empty()" onmouseup="document.selection.empty()">
    	<div id="wrapper">
 		<div id="logo">
 			<div class="am-cf am-padding am-padding-bottom-0">

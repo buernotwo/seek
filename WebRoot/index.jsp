@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script src="./js/zepto.min.js"></script>
 		<script src="./js/dialog.js"></script>
 	</head>
-	<body background="./img/body.png">
+	<body background="./img/body.png" oncontextmenu="return false" ondragstart="return false" onselect="document.selection.empty()" onmouseup="document.selection.empty()">
 			<!-- <div id="spliteleftright"></div> -->
 			<!-- <div id="seek"><p style="border-left:5px solid #000;font-size:28px;">你</p><p style="border-left:5px solid #000;margin-left:40px;font-size:30px;">是谁？</p></div> -->
 			<div id="wrapper">
