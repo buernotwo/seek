@@ -55,6 +55,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		width:200px;
 		height:200px;
 		float:left;
+		transition: all 0.6s;
+	}
+	.dingzhi-img img:hover{
+		transform: scale(1.4);
 	}
 	</style>
   </head>
