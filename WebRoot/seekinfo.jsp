@@ -66,6 +66,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			          <p><code>SocialAccount:<s:property value="user.SocialAccount"/></code></p>
 			          <p><code>UniformPwd:<s:property value="user.UniformPwd"/></code></p>
 			          <p><code>Description:<s:property value="user.Description"/></code></p>
+			          <s:iterator value="imageList" status="li">
+						  <p><code>ImageID:<s:property value="ImageID"/></code></p>
+						  <p><code>IDCard:<s:property value="IDCard"/></code></p>
+						  <p><code>Image:<s:property value="Image"/></code></p>
+					  </s:iterator>
 			      </td>
 			    </tr>
 			  </tbody>

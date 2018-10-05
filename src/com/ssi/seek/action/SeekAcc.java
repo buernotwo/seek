@@ -1,33 +1,43 @@
 package com.ssi.seek.action;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.ssi.seek.dao.ImageDao;
 import com.ssi.seek.dao.UserDao;
+import com.ssi.seek.model.Image;
 import com.ssi.seek.model.User;
 
 
 /**
- * 根据用户输入的关键字去数据库查找相关信息，并return.
+ * 根据用户输入的关键字去数据库查找相关信息，并返回。
+ * @author Tisawudii.Akun
  * */
 @SuppressWarnings("serial")
 public class SeekAcc extends BaseAction {
 	
 	@Autowired
 	private UserDao userDao;
+	@Autowired
+	private ImageDao imageDao;
 	
 	private User user;
+	private List<Image> imageList;
 	private String SeekString;
 	public String Seek() throws Exception {
-		//根据SeekString从数据库查询相关信息返回
 		if("".equals(SeekString))
 			return ERROR;
 		User userT = userDao.getUserInfoByIDCard(SeekString);
+		List<Image> imageListT = imageDao.getImageByIDCard(SeekString);
 		if(userT != null)
-		{
 			this.setUser(userT);
-			//userDao.deleteUser(userT.getIDCard());
-			return SUCCESS;
+		if(!imageListT.isEmpty())
+		{
+			setImageList(imageListT);
 		}
+		if((userT != null) || (!imageListT.isEmpty()))
+			return SUCCESS;
 		return ERROR;
 	}
 
@@ -46,5 +56,15 @@ public class SeekAcc extends BaseAction {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+	public List<Image> getImageList() {
+		return imageList;
+	}
+
+	public void setImageList(List<Image> imageList) {
+		this.imageList = imageList;
+	}
+
+
 	
 }
