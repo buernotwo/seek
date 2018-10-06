@@ -19,20 +19,17 @@ public class ImageDaoImpl extends SqlSessionDaoSupport implements ImageDao {
 
 	@Override
 	public int insertImage(Image image) {
-		
-		return 0;
+		return getSqlSession().insert("ImageMapper.insertImage", image);
 	}
 
 	@Override
 	public int deleteImage(String IDCard) {
-		
-		return 0;
+		return getSqlSession().delete("ImageMapper.deleteImage", IDCard);
 	}
 
 	@Override
 	public int updateImage(Image image) {
-		
-		return 0;
+		return getSqlSession().update("ImageMapper.updateImage", image);
 	}
 	
 }
