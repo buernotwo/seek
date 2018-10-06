@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -26,6 +27,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<body background="./img/body.png" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" oncopy="document.selection.empty()" onbeforecopy="return false">
 			<!-- <div id="spliteleftright"></div> -->
 			<!-- <div id="seek"><p style="border-left:5px solid #000;font-size:28px;">你</p><p style="border-left:5px solid #000;margin-left:40px;font-size:30px;">是谁？</p></div> -->
+			<s:if test="SWord.SensitiveWordSize>0">
+			<div id="OutsideSWDiv">
+				<div id="SensitiveWordDiv">
+		      	    <p><code>很抱歉，您的搜索内容中带有敏感政治倾向（或反执政党倾向）、暴力倾向、不健康色彩的词或不文明语，请您重新输入</code></p>
+			        <p><code>敏感词个数：<s:property value="SWord.SensitiveWordSize"/></code></p>
+			        <p><code>敏感词：<s:property value="SWord.SensitiveWordSet"/></code></p>
+			        <p><code>过滤后字符串：<s:property value="SWord.OutString"/></code></p>
+		        </div>
+	        </div>
+	        </s:if>
+	        <s:elseif test="SWord.SensitiveWordSize==0">
+	        <div id="OutsideSWDiv">
+				<div id="SensitiveWordDiv">
+	                <p><code>连接服务器失败...</code></p>
+	                <p><code>可能原因：运气不好；数据库中无您想要的数据；服务器数据对你进行了隔离；服务器今天在维修中；由于网站火爆，您被挤出来了；ERR_SERVER_DISCONNECTED</code></p>
+	            </div>
+	        </div>
+			</s:elseif>
 			<div id="wrapper">
 				<div id="logo">
 					<form id="formID" action="seek.acc" target="_self" method="post">

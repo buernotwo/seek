@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -58,12 +59,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					  <tbody class="d-block">
 					    <tr class="d-block">
 					      <td class="d-block comment-body markdown-body  js-comment-body">
-					          <p><code>连接服务器失败</code></p>
-					          <p><code>请试试以下办法：
-									     检查网线、调制解调器和路由器;
-									     重新连接到 Wi-Fi 网络;
-									     运行 Windows 网络诊断;
-									   ERR_INTERNET_DISCONNECTED</code></p>
+					          <p><code>连接服务器失败...</code></p>
+						      <p><code>可能原因：运气不好；服务器数据对你进行了隔离；服务器今天在维修中；由于网站火爆，您被挤出来了；ERR_SERVER_DISCONNECTED</code></p>
 					      </td>
 					    </tr>
 					  </tbody>

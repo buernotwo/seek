@@ -38,6 +38,10 @@
         <filter-name>struts2</filter-name>    
         <url-pattern>*.acc</url-pattern>   
     </filter-mapping>
+        <filter-mapping>    
+        <filter-name>struts2</filter-name>    
+        <url-pattern>*.jsp</url-pattern>   
+    </filter-mapping>
 	
     <!-- 对Spring 容器进行实例化 -->    
     <listener>    

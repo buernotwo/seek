@@ -14,6 +14,8 @@ import com.ssi.seek.dao.ImageDao;
 import com.ssi.seek.dao.UserDao;
 import com.ssi.seek.model.Image;
 import com.ssi.seek.model.User;
+import com.ssi.seek.tool.SensitiveWordCheck;
+import com.ssi.seek.tool.data.SensitiveWord;
 
 
 /**
@@ -31,14 +33,28 @@ public class SeekAcc extends BaseAction {
 	private User user;
 	private List<Image> imageList;
 	private String SeekString;
+	private SensitiveWord SWord;
+	private long SensitiveWordCheckTime;
+	
 	public String Seek() throws Exception {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String filePath = request.getSession().getServletContext().getRealPath("");//request.getContextPath();
-		//request.getSession().getServletContext().getRealPath("");
-		//C:\Users\Administrator\Workspaces\MyEclipse 10--\.metadata\.me_tcat\webapps\seek\111111.png
+		/**
+		 * request.getSession().getServletContext().getRealPath("");
+		 * C:\Users\Administrator\Workspaces\MyEclipse 10--\.metadata\.me_tcat\webapps\seek\111111.png
+		 */
 		if(("".equals(SeekString)) || (SeekString == null))
 			return ERROR;
-		User userT = userDao.getUserInfoByIDCard(SeekString);
+		long startNumber = System.currentTimeMillis();
+		SensitiveWordCheck sw = new SensitiveWordCheck("CensorWords.txt");  
+	    sw.InitializationWork();
+	    long endNumber = System.currentTimeMillis();
+	    
+	    this.setSWord(sw.filterInfo(SeekString));
+	    this.setSensitiveWordCheckTime(endNumber-startNumber);
+	    if(this.getSWord().getSensitiveWordSize() > 0)
+	    	return "SensitiveWord";
+	    User userT = userDao.getUserInfoByIDCard(SeekString);
 		List<Image> imageListT = imageDao.getImageByIDCard(SeekString);
 		if(userT != null)
 			this.setUser(userT);
@@ -83,6 +99,22 @@ public class SeekAcc extends BaseAction {
 
 	public void setImageList(List<Image> imageList) {
 		this.imageList = imageList;
+	}
+
+	public SensitiveWord getSWord() {
+		return SWord;
+	}
+
+	public void setSWord(SensitiveWord sWord) {
+		SWord = sWord;
+	}
+
+	public long getSensitiveWordCheckTime() {
+		return SensitiveWordCheckTime;
+	}
+
+	public void setSensitiveWordCheckTime(long sensitiveWordCheckTime) {
+		SensitiveWordCheckTime = sensitiveWordCheckTime;
 	}
 	
 }

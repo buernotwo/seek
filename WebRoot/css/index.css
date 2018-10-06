@@ -10,8 +10,8 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	width: 50%;
-	height: 30%;
+	width: 600px;
+	height: 40px;
 	margin: 250px auto;
 }
 form{
@@ -27,7 +27,6 @@ form{
     width:537px;
     height:40px;
     line-height:40px;
-    float:left;
     border-left:1px solid #000;
     border-top:1px solid #000;
     border-bottom:1px solid #000;
@@ -69,7 +68,7 @@ form{
 	background:#708090;color:#fff;cursor:pointer;
 }
 #seek p{
-	position:absolute;font-size:26px;font-family:"PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, Verdana, sans-serif;;
+	position:absolute;font-size:26px;font-family:"PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
 }
 #content1:hover{
 	background:#708090;color:white;cursor:pointer;
@@ -88,4 +87,24 @@ form{
 }
 #spliteleftright{
 	position:absolute;float:right;border:1px solid red;width:200px;
+}
+#SensitiveWordDiv{
+	border:1px solid #000;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 1px;
+    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    background: white;
+	overflow: hidden;
+	width: 600px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+#SensitiveWordDiv p{
+	padding: 0.2em 0.4em;
 }

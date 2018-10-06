@@ -21,8 +21,9 @@
         
     <package name="com.ssi.seek.action" extends="struts-default">    
         <action name="seek" class="com.ssi.seek.action.SeekAcc" method="Seek">     
-            <result name="error">/404.jsp</result>
+            <result name="error">/index.jsp</result>
             <result name="success">/seekinfo.jsp</result>
+            <result name="SensitiveWord">/index.jsp</result>
         </action>    
     </package>    
         
