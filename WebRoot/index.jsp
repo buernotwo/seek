@@ -67,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				        type : 'tips',
 				        infoText : 'Seeking…',
 				        infoIcon : './img/loading.gif',
-				        autoClose : 1000,
+				        autoClose : 500,
 				        onClosed : function(){
 				        	if((document.getElementById("search-input").value == "") || 
 				        	(document.getElementById("search-input").value == null))
