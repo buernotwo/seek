@@ -36,7 +36,7 @@ public class SeekAcc extends BaseAction {
 		String filePath = request.getSession().getServletContext().getRealPath("");//request.getContextPath();
 		//request.getSession().getServletContext().getRealPath("");
 		//C:\Users\Administrator\Workspaces\MyEclipse 10--\.metadata\.me_tcat\webapps\seek\111111.png
-		if("".equals(SeekString))
+		if(("".equals(SeekString)) || (SeekString == null))
 			return ERROR;
 		User userT = userDao.getUserInfoByIDCard(SeekString);
 		List<Image> imageListT = imageDao.getImageByIDCard(SeekString);

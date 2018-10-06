@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		right: 0;
 		width: 50%;
 		height: 30%;
-		margin: 50px auto;
+		margin: 30px auto;
 	}
 	.dingzhi-p p{
 		width:200px;
@@ -66,7 +66,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body style="background:url('<%=basePath%>img/body.png');" oncontextmenu="return false" ondragstart="return false" onselect="document.selection.empty()" onmouseup="document.selection.empty()">
   	<div id="wrapper">
 		<div id="logo">
-			<div class="am-cf am-padding am-padding-bottom-0" style="border-bottom:1px solid #000;border-top:2px solid #000;border-radius:50px 0 0 0;">
+			<div class="am-cf am-padding am-padding-bottom-0" style="margin-bottom:10px;border-bottom:1px solid #000;border-top:2px solid #000;border-radius:50px 0 0 0;">
 				<div class="am-fl am-cf"><!-- <strong class="am-text-primary am-text-lg">SUCCESS</strong> / <small style='font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";'><s:property value="user.Name"/> is in DB.Work in <s:property value="user.Company"/></small>-->
 					<table class="d-block">
 					  <tbody class="d-block">
