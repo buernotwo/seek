@@ -28,6 +28,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<body background="./img/body.png" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" oncopy="document.selection.empty()" onbeforecopy="return false">
 			<!-- <div id="spliteleftright"></div> -->
 			<!-- <div id="seek"><p style="border-left:5px solid #000;font-size:28px;">你</p><p style="border-left:5px solid #000;margin-left:40px;font-size:30px;">是谁？</p></div> -->
+
+			<div id="wrapper">
+				<div id="logo">
+					<form id="formID" action="seek.acc" target="_self" method="post">
+						<input type="text" id="search-input" name="SeekString" placeholder="To Seek You Wherever You are↲" autocomplete="off" onkeydown="if(event.keyCode==13) {return false;}">
+						<input type="button" id="search-button" value="">
+					</form>
+				</div>
+			</div>
+			
 			<s:if test="SWord.SensitiveWordSize>0">
 			<div id="OutsideSWDiv">
 				<div id="SensitiveWordDiv">
@@ -58,14 +68,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}, 5000);
 			</script>
 			</s:elseif>
-			<div id="wrapper">
-				<div id="logo">
-					<form id="formID" action="seek.acc" target="_self" method="post">
-						<input type="text" id="search-input" name="SeekString" placeholder="To Seek You Wherever You are↲" autocomplete="off" onkeydown="if(event.keyCode==13) {return false;}">
-						<input type="button" id="search-button" value="">
-					</form>
-				</div>
-			</div>
 			<!-- <div id="spliteline"></div> -->
 			<!-- <div id="content1">只要记住你的名字<br>
 							不管你在世界的哪个地方<br>

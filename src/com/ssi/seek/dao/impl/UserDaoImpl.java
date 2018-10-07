@@ -15,12 +15,8 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 
 		User user = new User();
 
-		// select语句，传入一个参数，返回User对象
-		// -------------------------------------------------------------------------
 		user = getSqlSession().selectOne("UserMapper.getUserInfoBySeekString", IDCard);
 
-		// insert语句，传入一个对象
-		// -------------------------------------------------------------------------------------
 		User oneUser = new User();
 		oneUser.setAge(Long.parseLong("25"));
 		oneUser.setCollege("xx戏剧学院");

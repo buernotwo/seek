@@ -1,70 +1,34 @@
 package com.ssi.seek.model;
 
 /**
- * @author 天下无敌.阿坤
+ * @author Tisawudii
  */
 public class User {
-	/*身份证号*/
+
 	private String IDCard;
-	/*国籍*/
 	private String Nationality;
-	/*几几后*/
 	private String PostXXs;
-	/*年龄*/
 	private Long Age;
-	/*姓名*/
 	private String Name;
-	/*昵称,曾用名*/
-	//private List<String> NickName;
-	private String NickName;
-	/*性别*/
+	private String NickName;	
 	private String Sex;
-	/*籍贯*/
 	private String HomeTown;
-	/*手机号码*/
-	//private List<String> PhoneNumber;
 	private String PhoneNumber;
-	/*电子邮箱*/
-	//private List<String> Email;
 	private String Email;
-	/*公司,公司地点*/
-	//private Map<String, String> Company;
 	private String Company;
-	/*家庭住址*/
-	//private Map<String, String> Home;
 	private String Home;
-	/*公司IDCard*/
-	//private Map<String, String> CompanyIDCard;
 	private String CompanyIDCard;
-	/*小学*/
-	//private Map<String, Date> PrimarySchool;
 	private String PrimarySchool;
-	/*中学*/
-	//private Map<String, Date> MiddleSchool;
 	private String MiddleSchool;
-	/*大学*/
-	//private Map<String, Date> College;
 	private String College;
-	/*图片*/
-	//private List<Long> Pic;
 	private String Pic;
-	/*爱好*/
-	//private List<String> Hobbies;
 	private String Hobbies;
-	/*家庭成员*/
-	//private Map<String, String> HomeMembers;
 	private String HomeMembers;
-	/*家庭成员联系方式*/
-	//private Map<String, String> ConnectInfo;
 	private String ConnectInfo;
-	/*社交账号*/
-	//private Map<String, String> SocialAccount;
 	private String SocialAccount;
-	/*密码*/
 	private String UniformPwd;
-	/*对User的描述*/
 	private String Description;
-	
+
 	public String getIDCard() {
 		return IDCard;
 	}

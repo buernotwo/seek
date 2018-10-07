@@ -1,0 +1,58 @@
+	/*身份证号*/
+
+	/*国籍*/
+
+	/*几几后*/
+
+	/*年龄*/
+
+	/*姓名*/
+
+	/*昵称,曾用名*/
+	//private List<String> NickName;
+
+	/*性别*/
+
+	/*籍贯*/
+
+	/*手机号码*/
+	//private List<String> PhoneNumber;
+	/*电子邮箱*/
+	//private List<String> Email;
+
+	/*公司,公司地点*/
+	//private Map<String, String> Company;
+
+	/*家庭住址*/
+	//private Map<String, String> Home;
+
+	/*公司IDCard*/
+	//private Map<String, String> CompanyIDCard;
+
+	/*小学*/
+	//private Map<String, Date> PrimarySchool;
+
+	/*中学*/
+	//private Map<String, Date> MiddleSchool;
+
+	/*大学*/
+	//private Map<String, Date> College;
+
+	/*图片*/
+	//private List<Long> Pic;
+
+	/*爱好*/
+	//private List<String> Hobbies;
+
+	/*家庭成员*/
+	//private Map<String, String> HomeMembers;
+
+	/*家庭成员联系方式*/
+	//private Map<String, String> ConnectInfo;
+
+	/*社交账号*/
+	//private Map<String, String> SocialAccount;
+
+	/*密码*/
+
+	/*对User的描述*/

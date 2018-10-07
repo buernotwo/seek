@@ -1,17 +1,14 @@
 package com.ssi.seek.model;
 
 /**
- * @author 天下无敌.阿坤
+ * @author Tisawudii
  */
 public class Image {
 	
-	/*身份证号*/
 	private String IDCard;
 	
-	/*图片ID*/
 	private String ImageID;
 	
-	/*图片*/
 	private byte[] Image;
 
 	public String getIDCard() {

@@ -1,8 +1,15 @@
-package com.ssi.seek.action;
+package com.ssi.seek.action.backup.action;
 
+//import java.io.BufferedOutputStream;
+//import java.io.File;
+//import java.io.FileOutputStream;
 import java.util.List;
+
+//import javax.servlet.http.HttpServletRequest;
+//import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.ssi.seek.action.BaseAction;
 import com.ssi.seek.dao.ImageDao;
 import com.ssi.seek.dao.UserDao;
 import com.ssi.seek.model.Image;
@@ -12,6 +19,7 @@ import com.ssi.seek.tool.data.SensitiveWord;
 
 
 /**
+ * 根据用户输入的关键字去数据库查找相关信息，并返回。
  * @author Tisawudii.Akun
  * */
 @SuppressWarnings("serial")
@@ -29,6 +37,12 @@ public class SeekAcc extends BaseAction {
 	private long SensitiveWordCheckTime;
 	
 	public String Seek() throws Exception {
+//		HttpServletRequest request = ServletActionContext.getRequest();
+//		String filePath = request.getSession().getServletContext().getRealPath("");//request.getContextPath();
+		/**
+		 * request.getSession().getServletContext().getRealPath("");
+		 * C:\Users\Administrator\Workspaces\MyEclipse 10--\.metadata\.me_tcat\webapps\seek\111111.png
+		 */
 		if(("".equals(SeekString)) || (SeekString == null))
 			return ERROR;
 		long startNumber = System.currentTimeMillis();
@@ -47,6 +61,16 @@ public class SeekAcc extends BaseAction {
 		if(!imageListT.isEmpty())
 		{
 			setImageList(imageListT);
+//			for(Image image:imageListT){
+//				FileOutputStream outSTr = null;
+//				BufferedOutputStream Buff=null;
+//				outSTr = new FileOutputStream(new File(filePath+"\\"+image.getImageID()+".png"));
+//				System.out.println(filePath+"\\"+image.getImageID()+".png");
+//				Buff=new BufferedOutputStream(outSTr);
+//				Buff.write(image.getImage());
+//				Buff.flush();
+//				Buff.close();
+//			}
 		}
 		if((userT != null) || (!imageListT.isEmpty()))
 			return SUCCESS;
