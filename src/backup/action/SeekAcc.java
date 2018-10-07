@@ -1,4 +1,4 @@
-package com.ssi.seek.action.backup.action;
+package backup.action;
 
 //import java.io.BufferedOutputStream;
 //import java.io.File;
