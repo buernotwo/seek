@@ -23,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link rel="stylesheet" href="./css/dialog.css">
 		<script src="./js/zepto.min.js"></script>
 		<script src="./js/dialog.js"></script>
+		<script src="./js/fade.js"></script>
 	</head>
 	<body background="./img/body.png" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" oncopy="document.selection.empty()" onbeforecopy="return false">
 			<!-- <div id="spliteleftright"></div> -->
@@ -36,6 +37,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			        <p><code>过滤后字符串：<s:property value="SWord.OutString"/></code></p>
 		        </div>
 	        </div>
+	        <script type="text/javascript">
+	        //fadein(document.getElementById('OutsideSWDiv'), 80, 6000);
+			setTimeout(function(){//5秒后隐藏
+			    fadeout(document.getElementById('OutsideSWDiv'), 0, 6000);
+			}, 5000);
+			</script>
 	        </s:if>
 	        <s:elseif test="SWord.SensitiveWordSize==0">
 	        <div id="OutsideSWDiv">
@@ -44,6 +51,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                <p><code>可能原因：运气不好；数据库中无您想要的数据；服务器数据对你进行了隔离；服务器今天在维修中；由于网站火爆，您被挤出来了；ERR_SERVER_DISCONNECTED</code></p>
 	            </div>
 	        </div>
+	        <script type="text/javascript">
+	        //fadein(document.getElementById('OutsideSWDiv'), 80, 6000);
+			setTimeout(function(){//5秒后隐藏
+			    fadeout(document.getElementById('OutsideSWDiv'), 0, 6000);
+			}, 5000);
+			</script>
 			</s:elseif>
 			<div id="wrapper">
 				<div id="logo">

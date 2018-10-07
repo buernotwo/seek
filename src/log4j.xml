@@ -79,10 +79,10 @@
 		<param name="threshold" value="debug" />
 		<!-- 缓存文件大小，日志达到512K时发送Email -->
 		<param name="BufferSize" value="512" /><!-- 单位K -->
-		<param name="From" value="test@163.com" />
+		<param name="From" value="buernotwo@gmail.com" />
 		<param name="SMTPHost" value="smtp.163.com" />
-		<param name="Subject" value="juyee-log4jMessage" />
-		<param name="To" value="test@163.com" />
+		<param name="Subject" value="Tisawudii-log4jMessage" />
+		<param name="To" value="zk_cwzy@163.com" />
 		<param name="SMTPUsername" value="test" />
 		<param name="SMTPPassword" value="test" />
 		<layout class="org.apache.log4j.PatternLayout">
