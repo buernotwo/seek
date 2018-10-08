@@ -6,9 +6,17 @@ import java.util.Date;
  * @author Tisawudii
  * */
 public class IP {
+	private String IPID;
 	private String IDCard;
 	private String IP;
-	private Date LastLoginDate;
+	private Date LastestLoginDate;
+	
+	public String getIPID() {
+		return IPID;
+	}
+	public void setIPID(String iPID) {
+		IPID = iPID;
+	}
 	public String getIDCard() {
 		return IDCard;
 	}
@@ -22,10 +30,10 @@ public class IP {
 		IP = iP;
 	}
 	public Date getLastLoginDate() {
-		return LastLoginDate;
+		return LastestLoginDate;
 	}
 	public void setLastLoginDate(Date lastLoginDate) {
-		LastLoginDate = lastLoginDate;
+		LastestLoginDate = lastLoginDate;
 	}
 	
 }

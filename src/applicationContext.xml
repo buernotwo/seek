@@ -51,7 +51,13 @@
     <bean id="ImageDao"    
 	    class="com.ssi.seek.dao.impl.ImageDaoImpl"    
 	    parent="abstractDao" />  
-    
+    <bean id="LogDao"    
+		class="com.ssi.seek.dao.impl.LogDaoImpl"    
+		parent="abstractDao" />
+    <bean id="IPDao"    
+		class="com.ssi.seek.dao.impl.IPDaoImpl"    
+		parent="abstractDao" />
+		
     <context:component-scan base-package="com.ssi.seek">    
         <context:exclude-filter type="annotation"    
             expression="org.springframework.stereotype.Controller" />    

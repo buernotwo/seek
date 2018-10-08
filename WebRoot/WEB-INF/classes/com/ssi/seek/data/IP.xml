@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>      
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="IPMapper">
+
+	<select id="getIPByIDCard" parameterType="String"
+		resultType="com.ssi.seek.model.IP">
+		select
+		IPID, IDCARD, IP, LASTESTLOGINDATE
+		from T_IP
+		WHERE IDCARD = #{IDCard}
+	</select>
+
+	<insert id="insertIP" parameterType="com.ssi.seek.model.IP">
+		insert into
+		T_IP(IPID, IDCARD, IP, LASTESTLOGINDATE)
+		values(#{IPID},#{IDCard},#{IP},#{LastestLoginDate})
+	</insert>
+	
+	<select id="deleteIp" parameterType="String"
+		resultType="com.ssi.seek.model.IP">
+		delete
+		from T_IP
+		WHERE IDCARD = #{IDCard}
+	</select>
+
+	<select id="updateIP" parameterType="com.ssi.seek.model.IP"
+		resultType="com.ssi.seek.model.IP">
+		update T_IP
+		set IP = #{IP}, LASTESTLOGINDATE = #{LastestLoginDate}
+		WHERE IDCARD = #{IDCard}
+	</select>
+</mapper>
