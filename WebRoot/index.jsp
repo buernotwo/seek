@@ -68,6 +68,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}, 5000);
 			</script>
 			</s:elseif>
+			
+			<s:if test="(IPAddr!=null)&&(IPAddr!='')">
+		    	IP:<s:property value="IPAddr"/>在访问该网站...
+			</s:if>
 			<!-- <div id="spliteline"></div> -->
 			<!-- <div id="content1">只要记住你的名字<br>
 							不管你在世界的哪个地方<br>

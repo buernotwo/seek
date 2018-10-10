@@ -1,12 +1,17 @@
 package com.ssi.seek.action;
 
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ssi.seek.dao.ImageDao;
 import com.ssi.seek.dao.UserDao;
 import com.ssi.seek.model.Image;
 import com.ssi.seek.model.User;
+import com.ssi.seek.tool.GetIP;
 import com.ssi.seek.tool.SensitiveWordCheck;
 import com.ssi.seek.tool.data.SensitiveWord;
 
@@ -27,8 +32,14 @@ public class SeekAcc extends BaseAction {
 	private String SeekString;
 	private SensitiveWord SWord;
 	private long SensitiveWordCheckTime;
+	private String IPAddr;
 	
 	public String Seek() throws Exception {
+		
+		HttpServletRequest request = ServletActionContext.getRequest();
+		
+		this.setIPAddr(GetIP.getIpAddr(request));
+		
 		if(("".equals(SeekString)) || (SeekString == null))
 			return ERROR;
 		long startNumber = System.currentTimeMillis();
@@ -91,6 +102,14 @@ public class SeekAcc extends BaseAction {
 
 	public void setSensitiveWordCheckTime(long sensitiveWordCheckTime) {
 		SensitiveWordCheckTime = sensitiveWordCheckTime;
+	}
+
+	public String getIPAddr() {
+		return IPAddr;
+	}
+
+	public void setIPAddr(String iPAddr) {
+		IPAddr = iPAddr;
 	}
 	
 }
