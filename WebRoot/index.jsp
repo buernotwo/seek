@@ -21,6 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta http-equiv="description" content="This is my generation">
 		<link rel="stylesheet" href="./css/index.css"/>
 		<link rel="stylesheet" href="./css/dialog.css">
+		<link rel="stylesheet" href="./css/self.common.css">
 		<script src="./js/zepto.min.js"></script>
 		<script src="./js/dialog.js"></script>
 		<script src="./js/fade.js"></script>
@@ -70,7 +71,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</s:elseif>
 			
 			<s:if test="(IPAddr!=null)&&(IPAddr!='')">
-		    	IP:<s:property value="IPAddr"/>在访问该网站...
+				ip <u><s:property value="IPAddr"/></u> is visiting the website...
 			</s:if>
 			<!-- <div id="spliteline"></div> -->
 			<!-- <div id="content1">只要记住你的名字<br>

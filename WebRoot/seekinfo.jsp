@@ -18,6 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="">
     <link rel="alternate icon" href="./img/kaduoxi.jpg" type="image/png" />
 	<link rel="stylesheet" href="./css/amazeui.min.css"/>
+	<link rel="stylesheet" href="./css/self.common.css">
 	<script src="./js/jquery-1.8.0.min.js"></script>
 	<style type="text/css">
 	.markdown-body {
@@ -122,6 +123,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<img id="bigimg" style="border:5px solid #fff;" src=""/>      
 		</div>
 	</div>
+	<s:if test="(IPAddr!=null)&&(IPAddr!='')">
+		ip <u><s:property value="IPAddr"/></u> is visiting the website...
+	</s:if>
 	<script src="./js/bigimage.js"></script>
   </body>
 </html>
