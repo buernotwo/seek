@@ -1,5 +1,24 @@
 u{
-	font-size: 20px;
-	text-decoration-color:red;
+	font-size: 18px;
+	text-decoration-style: solid;
 	font-family:"PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+}
+.mycode code {
+    padding: 2px 4px;
+    font-size: 1.3rem;
+    color: #000;
+    background-color: #f8f8f8;
+    white-space: nowrap;
+    border-radius: 0;
+    font-family: Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+}
+
+.mycode_backup code {
+    padding: 2px 4px;
+    font-size: 1.3rem;
+    color: #c7254e;
+    background-color: #f8f8f8;
+    white-space: nowrap;
+    border-radius: 0;
+    font-family: Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
 }

@@ -124,7 +124,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 	</div>
 	<s:if test="(IPAddr!=null)&&(IPAddr!='')">
-		ip <u><s:property value="IPAddr"/></u> is visiting the website...
+	<div class="mycode">
+		<code>IP <s:property value="IPAddr"/> is visiting the website...</code>
+	</div>
 	</s:if>
 	<script src="./js/bigimage.js"></script>
   </body>
