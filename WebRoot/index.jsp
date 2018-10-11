@@ -71,8 +71,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</s:elseif>
 			
 			<s:if test="(IPAddr!=null)&&(IPAddr!='')">
-			<div class="mycode">
-				<code>IP <s:property value="IPAddr"/> is visiting the website...</code>
+			<div class="mycode" id="mmycode">
+				<p>IP <s:property value="IPAddr"/> is visiting the website...</p>
 			</div>
 			</s:if>
 			<!-- <div id="spliteline"></div> -->
