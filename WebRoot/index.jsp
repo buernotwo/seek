@@ -75,6 +75,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<p>IP <s:property value="IPAddr"/> is visiting the website...</p>
 			</div>
 			</s:if>
+			
+			<s:if test="(SIGNUP_FLAG=='SIGNUP')">
+				SIGNUP......
+			</s:if>
 			<!-- <div id="spliteline"></div> -->
 			<!-- <div id="content1">只要记住你的名字<br>
 							不管你在世界的哪个地方<br>
@@ -108,12 +112,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				        type : 'tips',
 				        infoText : 'Seeking…',
 				        infoIcon : './img/loading.gif',
-				        autoClose : 500,
+				        autoClose : 300,
 				        onClosed : function(){
 				        	if((document.getElementById("search-input").value == "") || 
 				        	(document.getElementById("search-input").value == null))
            					{
-           						alert('Input content can not be empty.');
+           						$.dialog({
+							        type : 'confirm',
+							        buttonText : {
+							            ok : 'OK',
+							            cancel : 'NO'
+							        },
+							        contentHtml : '<p style="font-family:Monaco,Menlo,Consolas,FontAwesome,monospace;">Input content can not be empty.</p> <p style="font-family:Monaco,Menlo,Consolas,FontAwesome,monospace;">OK?</p>'
+							    });
        						}else{
 	       						document.getElementById("formID").submit();
        						}

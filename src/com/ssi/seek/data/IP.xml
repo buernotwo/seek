@@ -7,7 +7,7 @@
 	<select id="getIPByIDCard" parameterType="String"
 		resultType="com.ssi.seek.model.IP">
 		select
-		IPID, IDCARD, IP, LASTESTLOGINDATE
+		*
 		from T_IP
 		WHERE IDCARD = #{IDCard}
 	</select>

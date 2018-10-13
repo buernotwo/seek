@@ -51,5 +51,5 @@
 
 
 @media screen and (min-width: 1024px) {
-  .dialog-content { max-width: 45%; }
+  .dialog-content { max-width: 25%; }
 }

@@ -1,10 +1,12 @@
 package com.ssi.seek.dao.impl;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.springframework.stereotype.Repository;
 
 import com.ssi.seek.dao.LogDao;
 import com.ssi.seek.model.Log;
 
+@Repository(value = "LogDao")
 public class LogDaoImpl extends SqlSessionDaoSupport implements LogDao{
 
 	@Override

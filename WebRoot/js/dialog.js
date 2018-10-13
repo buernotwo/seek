@@ -24,8 +24,7 @@
             overlay = $('<div class="dialog-overlay"></div>'),
             content = $('<div class="dialog-content dialog-content-animate"></div>')
         );
-        solveTapBug = $('<div class="solve-tap-bug" style="margin:0;padding:0;border:none;background:rgba(255,255,255,0.01); -webkit-tap-highlight-color:rgba(0,0,0,0); width:100%; height:100%; position:fixed; top:0px; left:0px;"></div>').insertBefore(dialogWrapper);
-
+        solveTapBug = $('<div class="solve-tap-bug" id="solve-tap-bug" style="margin:0;padding:0;border:none;background:rgba(255,255,255,0.01); -webkit-tap-highlight-color:rgba(0,0,0,0); width:100%; height:100%; position:fixed; top:0px; left:0px;"></div>').insertBefore(dialogWrapper);
 
         switch (settings.type){
             case 'alert' :
@@ -74,11 +73,14 @@
 
             case 'tips' :
                 var tipsContent = settings.contentHtml || (settings.infoIcon ? '<img class="info-icon" src="'+ settings.infoIcon +'" alt="'+ settings.infoText +'" />' : '') + '<span class="info-text">'+ settings.infoText +'</span>';
+
                 content.append(
                     contentBd = $('<div class="dialog-content-bd">'+ tipsContent +'</div>')
                 );
+
                 dialogWrapper.addClass('dialog-wrap-tips');
                 content.addClass('dialog-content-tips').removeClass('dialog-content-animate');
+
                 break;
         }
 
@@ -100,7 +102,7 @@
 
     var _setDirectionAndAlign = function(){
       $(contentBd).css({'direction': settings.direction,'text-align': settings.align});
-    }
+    };
 
     var _bindEvent = function() {
 
@@ -268,10 +270,8 @@
             return true;
         });
 
-        // 解决touchend点透，延迟阻止点透层隐藏
-        setTimeout(function(){
-            solveTapBug.remove();
-        }, 350);
+        solveTapBug.remove();
+        
     };
 
     $.dialog.update = function(params) {
@@ -299,7 +299,7 @@
 
     $.fn.dialog.defaults = {
         type : 'alert',     // alert、confirm、info、tips
-        titleText : '信息提示',
+        titleText : 'information cue',
         showTitle : true,
         contentHtml : '',
         dialogClass : '',

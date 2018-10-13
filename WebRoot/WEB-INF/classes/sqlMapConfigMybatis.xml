@@ -6,6 +6,7 @@
     <mappers>    
         <!-- 配置 SQL 语句文件 -->    
         <mapper resource="com/ssi/seek/data/User.xml" />   
-        <mapper resource="com/ssi/seek/data/Image.xml" />   
+        <mapper resource="com/ssi/seek/data/Image.xml" />  
+        <mapper resource="com/ssi/seek/data/IP.xml" />
     </mappers>    
 </configuration>
